@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome! WebDevEnvironment</title>
+    <meta charset = "UTF-8">
+
+    <!-- CSS Stylesheet -->
+    <link href="./lib/feed.css" rel="stylesheet">
+
+    <!-- Custom JavaScript -->
+    <script src="#"></script>
+
+    <!-- Google fonts: 'Prociono', 'Arvo' -->
+    <link href='http://fonts.googleapis.com/css?family=Prociono' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+<!-- Top Bar -->
+<header id="welcome">
+    <section class="fixedwidth">
+        <a href="index.php"><h1 id="logo"><span id="power">WebDev</span> Environment</h1></a>
+        <input form="search" type="text" id="search" name="search" placeholder="Search for a Post..." maxlength="40"/>
+    </section>
+</header>
+<section class="fixedwidth main">
+    <section class="profileContainer" id="profile">
+        <img src="Images/300x400.jpg" id="dp" alt="Profile Picture" />
+        <ul class="profileNav">
+            <a href="feed.html"><li>Home Feed</li></a>
+            <a href="IDE.html" target="_blank"><li>Online IDE</li></a>
+            <a href="logbook.html"><li>Logbook</li></a>
+            <a href="index.php"><li>Logout</li></a>
+        </ul>
+    </section>
+    <section class="secondaryContainer">
+        <div id="results">
+
+        </div>
+    </section>
+
+    <script src="lib/mypostlivesearch.js"></script>
+
+</body>
+</html>

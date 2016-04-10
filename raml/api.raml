@@ -1,0 +1,72 @@
+#%RAML 0.8
+---
+  title: WebDev Learning Environment API
+  baseUri: http://webdevenvironment.dev/api/1/
+  version:
+  traits:
+    - filterable:
+        queryParameters:
+          filter:
+            description: Filter the returned results using a substring match.
+            type: string
+            required: false
+            example: Development
+    - modifyable:
+        queryParameters:
+          dis:
+            displayName: question
+            description: A question/string that should be stored.
+            type: string
+            required: true
+            example: what is wrong with my code?
+          det:
+            displayName: details
+            description: A brief outline of the question asked (details).
+            type: string
+            required: false
+            example: This question must be in JSON.
+          cat:
+            displayName: catagory
+            description: A discussion has to belong to a catagory.
+            type: string
+            required: true
+            example: HTML, CSS, Javascript, JSON, etc
+
+  /users:
+    /questions:
+      get:
+        description: Retrieve a discussion/question with details about it posted by a user.
+        is: [
+            modifyable,
+            filterable
+        ]
+        queryParameters:
+          question:
+            displayName: Question
+            type: string
+            description: Question asked by a user on the feed
+            example: what is wrong with my code?
+            required: true
+          detail:
+            displayName: Details
+            type: string
+            description: Details about the question asked
+            example: Here is my code...
+            required: false
+          date:
+            displayName: Posted
+            type: string
+            description: A date and time for when the discussion was posted
+            example: Posted on 3rd January, 2016
+            required: true
+      post:
+        description: create a new entry (question) with or without details, assign an id and store.
+        is: [
+          modifyable
+        ]
+      put:
+        description: Discussions can be updated after being posted.
+        is: [
+          modifyable
+        ]
+    /replies:

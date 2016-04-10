@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+    <title>Online IDE</title>
+
+    <meta charset="utf-8" />
+
+    <!-- Google fonts: 'Prociono', 'Arvo' -->
+    <link href='http://fonts.googleapis.com/css?family=Prociono' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="./lib/IDEstyle.css"  />
+
+</head>
+
+<body>
+
+
+<div id="wrapper">
+
+    <div id="menuBar">
+
+        <div id="logo">WebDev OnlineIDE</div>
+
+        <input type="checkbox" id="html" class="hidden" onclick="toggle(this.id)" checked>
+        <label for="html" class="toggles">HTML</label>
+        <input type="checkbox" id="css" class="hidden">
+        <label for="css" class="toggles">CSS</label>
+        <input type="checkbox" id="js" class="hidden">
+        <label for="js" class="toggles">JS</label>
+        <input type="checkbox" id="result" class="hidden" checked>
+        <label for="result" class="toggles">Result</label>
+
+        <div id="runButton">
+            <button id="run">Run</button>
+        </div>
+
+    </div>
+
+    <div class="codeContainer" id="HTMLContainer">
+
+        <div class="codeLabel">HTML</div>
+        <textarea id="htmlCode">Example Code</textarea>
+
+    </div>
+
+    <div class="codeContainer hidden" id="CSSContainer">
+
+        <div class="codeLabel">CSS</div>
+        <textarea id="cssCode">html {background-color: blue;}</textarea>
+
+    </div>
+
+    <div class="codeContainer hidden" id="JSContainer">
+
+        <div class="codeLabel">JS</div>
+        <textarea id="jsCode">alert('Done');</textarea>
+
+    </div>
+
+    <div class="codeContainer" id="ResultContainer">
+
+        <div class="codeLabel">Result</div>
+        <iframe id="resultFrame"></iframe>
+
+    </div>
+
+</div>
+
+<script src="lib/customIDE.js"></script>
+
+</body>
+
+</html>

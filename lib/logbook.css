@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+    font-family: 'Prociono', serif;
+    background-color: #031d44;
+    color: #000000;
+}
+
+/* NavBar */
+#welcome{
+    background-color: white;
+    width: 100%;
+    height: 75px;
+    color: black;
+    opacity: 0.9;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+#logo {
+    width:300px;
+    height: 100px;
+    margin-top: 17px;
+    font-size: 2em;
+    font-weight: 100;
+    letter-spacing: -1px;
+    float: left;
+}
+
+#power {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a {
+    color: #505050;
+    text-decoration: none;
+
+}
+
+.fixedwidth{
+    width: 75%;
+    margin: 0 auto;
+}
+
+#welcome #nav {
+    float: right;
+    font-size: 1.2em;
+}
+
+#nav ul{
+    list-style: none;
+}
+
+#welcome #nav li {
+    float: left;
+    padding: 5px 32px 10px 32px;
+}
+
+#nav a {
+    color: #505050;
+    text-decoration: none;
+}
+
+#nav li:hover {
+    font-weight: bolder;
+}
+
+.selected {
+    font-weight: bolder;
+}
+
+/* Body Content */
+
+.flexContainer {
+    display: flex;
+    margin-top: 100px;
+}
+
+.profileContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profileNav {
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profileNav li {
+    font-size: 1.3em;
+    width: auto;
+    padding: 2vh;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.profileNav li:hover {
+    background-color: #e0e0e0;
+}
+
+#dp {
+    padding: 5%;
+    border-radius: 10%;
+    width: 80%;
+    height: 80%;
+    max-width: 300px;
+    max-height: 400px;
+}
+
+#profile {
+    flex: 1;
+    background-color: white;
+    height: 85vh;
+    margin-right: 20px;
+}
+
+.secondaryContainer {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+}
+
+#logbook{
+    padding:2%;
+    min-height: 65vh;
+}
