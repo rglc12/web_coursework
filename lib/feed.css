@@ -160,19 +160,36 @@ textarea {
 }
 
 .post div {
-    padding-left: 3vw;
+    padding-left: 1vw;
 }
 
 .post-heading {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     font-size: 1.2em;
     font-weight: 500;
+    margin-bottom: 0;
+}
+
+.post-heading a {
+    flex: 1;
+    width: 20%;
+    margin-top: 1vh;
+    cursor: pointer;
+}
+
+.post-question {
+    flex: 4;
+    width: 80%;
+    margin-top: 1vh;
     margin-bottom: 0;
 }
 
 .post-details {
     font-size: 0.7em;
     background-color: #e0e0e0;
-    margin: 1vh 0 0 0;
+    margin-top: 1vh;
     padding: 2%;
 }
 

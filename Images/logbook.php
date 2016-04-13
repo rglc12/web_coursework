@@ -36,10 +36,6 @@
         <h2>[USER FIRST NAME]'s Logbook</h2>
         <textarea id="logbook"></textarea>
     </section>
-
-    <script src="lib/AjaxGet.js"></script>
-    <script src="lib/getLogbook.js"></script>
-
 </body>
 </html>
 

@@ -5,16 +5,18 @@
 include __DIR__.'/../inc/all.php';
 
     $username = $_GET['username'];
-    $password = $_GET['password'];
+    $password = md5($_GET['password']);
 
-    $query = $dbh->prepare("SELECT * FROM User WHERE username = '$username' AND password = '$password'");
+    $query = $dbh->prepare("SELECT id FROM User WHERE username = '$username' AND password = '$password'");
     $query->execute();
     $result = $query->fetch();
-    if ($result->rowCount() == 1) {
-        header("Location: feed.html");
-        return;
+
+    if ($result->rowCount() > 0) {
+
+        $_SESSION['id'] = $result['id'];
+        print_r($_SESSION);
+
     } else {
         echo "Boo user... boo you dirty user!";
     }
-
 ?>
